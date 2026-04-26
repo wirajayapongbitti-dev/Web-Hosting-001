@@ -10,13 +10,27 @@
             padding: 0;
             font-family: sans-serif;
             
+            /* Menggunakan nama file yang diminta */
             background-image: url('bg-foto.jpg');
-            background-size: cover;
-            background-position: center;
+            
+            /* 'contain' memastikan seluruh gambar terlihat tanpa terpotong */
+            /* atau gunakan '100% auto' agar lebar penuh dan tinggi mengikuti gambar */
+            background-size: 100% auto; 
+            
+            background-position: top center;
             background-attachment: scroll;
             background-repeat: no-repeat;
-         
-            min-height: 200vh; 
+
+            /* Menghilangkan background putih agar tidak ada sisa warna di bawah gambar */
+            background-color: #000000; 
+        }
+
+        /* Container utama agar tinggi halaman mengikuti tinggi gambar */
+        .main-wrapper {
+            width: 100%;
+            /* Kalkulasi aspek rasio gambar 1186x1860 */
+            /* Tinggi = (1860 / 1186) * 100vw */
+            min-height: 156.8vw; 
         }
 
         .bar-info-header {
@@ -43,32 +57,31 @@
             margin: 0;
             flex-grow: 1;
             text-align: center;
+            font-size: 14px;
         }
 
         .content {
-            margin-top: 185px; 
-            padding: 20px;
+            padding-top: 185px; 
             text-align: center;
         }
 
-        h5, h6 {
-            color: #092144;
-            font-family: Arial;
-            margin: 5px 0;
-        }
     </style>
 </head>
 <body>
 
     <div class="bar-info-header">
         <img src="logo.png" alt="Logo">
-        <h4>XII TEKNIK KOMPUTER & JARINGAN C</h4>
+        <h3>XII TEKNIK KOMPUTER & JARINGAN C</h3>
         <img src="logosmk.png" alt="Logo SMK">
     </div>
 
-    <div class="content">
-        <b><i><h5 style="font-size: 1.5rem; color: white;">Welcome!</h5></i></b>
-        <i><h6 style="color: white;">To Class XII TKJ C SMK KRISTEN HARAPAN RANTEPAO</h6></i>
+    <div class="main-wrapper">
+        <div class="content">
+            <div class="glass-card">
+                <b><i><h5 style="color: white; font-size: 1.5rem; margin: 0;">Welcome!</h5></i></b>
+                <i><h6 style="color: white; font-size: 1rem; margin: 5px 0 0 0;">To Class XII TKJ C SMK KRISTEN HARAPAN RANTEPAO</h6></i>
+            </div>
+        </div>
     </div>
 
 </body>
