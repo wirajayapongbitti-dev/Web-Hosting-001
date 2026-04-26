@@ -1,164 +1,83 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <title>Anvanced Intergreted Communication System</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLASS XII TKJ C</title>
     <style>
-        html, body { height: 100%; margin: 0; font-family: 'Segoe UI', sans-serif; overflow: hidden; }
-        #login-page { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; padding: 20px; }
-        .login-card { 
-            h2 {color: #075e54; font-size: 40px; font-family: Arial;}
-            h5 {color: #075e54; font-size: small; border-color: white; font-family: Arial;}
-            background: white; padding: 35px 25px; border-radius: 15px; 
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); width: 100%; max-width: 400px; 
-            text-align: center; border: 1px solid #f0f0f0;
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            
+            /* Menggunakan nama file yang diminta */
+            background-image: url('bg-foto.jpg');
+            
+            /* 'contain' memastikan seluruh gambar terlihat tanpa terpotong */
+            /* atau gunakan '100% auto' agar lebar penuh dan tinggi mengikuti gambar */
+            background-size: 100% auto; 
+            
+            background-position: top center;
+            background-attachment: scroll;
+            background-repeat: no-repeat;
         }
-        .login-card input { 
-            width: 100%; padding: 14px; margin: 10px 0; border: 1px solid #ddd; 
-            border-radius: 10px; box-sizing: border-box; outline: none;
+
+        /* Container utama agar tinggi halaman mengikuti tinggi gambar */
+        .main-wrapper {
+            width: 100%;
+            min-height: 156.8vw; 
         }
-        #chat-page { display: none; height: 100%; flex-direction: column; }
-        .header { 
-            position: fixed; top: 0; left: 0; right: 0; height: 60px;
-            background: #075e54; color: white; padding: 0 15px; 
-            display: flex; justify-content: space-between; align-items: center; z-index: 1000; 
+
+        .bar-info-header {
+            background-color: #000000;
+            color: white;
+            padding: 20px 0;
+            font-weight: bold;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        #admin-panel {
-            background: #e3f2fd; padding: 10px; font-size: 12px; border-bottom: 1px solid #bbdefb;
-            display: none; max-height: 80px; overflow-y: auto; margin-top: 60px;
+
+        .bar-info-header img {
+            max-width: 60px;
+            height: auto;
+            padding: 0 20px;
         }
-        #chat { 
-            position: absolute; top: 60px; bottom: 70px; left: 0; right: 0;
-            padding: 15px; display: flex; flex-direction: column; overflow-y: auto;
+
+        .bar-info-header h4 {
+            margin: 0;
+            flex-grow: 1;
+            text-align: center;
+            font-size: 14px;
         }
-        .chat-with-admin { top: 140px !important; } 
-        .bubble { padding: 8px 12px; margin: 5px 0; border-radius: 10px; max-width: 80%; font-size: 15px; }
-        .received { align-self: flex-start; color: white; border-top-left-radius: 0; }
-        .sent { background: #dcf8c6 !important; color: black !important; align-self: flex-end; border-top-right-radius: 0; }
-        .footer { 
-            position: fixed; bottom: 0; left: 0; right: 0; height: 70px;
-            padding: 0 10px; background: #f0f0f0; display: flex; gap: 8px; align-items: center;
+
+        .content {
+            padding-top: 185px; 
+            text-align: center;
         }
-        #m { flex: 1; border: 1px solid #ccc; padding: 12px; border-radius: 25px; outline: none; }
-        button { cursor: pointer; border-radius: 5px; }
+
     </style>
 </head>
 <body>
-    <div id="login-page">
-        <div class="login-card">
-            <b><h2>AICS LOGIN</h2></b>
-            <h5>Login Gunakan Akun Anda</h5>
-            <input type="username" maxlength="10" id="userId" placeholder="ID Akun">
-            <input type="password" maxlength="8"  id="pass" placeholder="Password" onkeydown="if(event.key==='Enter')attemptLogin()">
-            <button onclick="attemptLogin()" style="width:100%; padding:14px; background:#075e54; color:white; border:none; font-weight:bold; margin-top:10px; border-radius: 10px;">MASUK</button>
-            <p id="err" style="color:red; font-size:12px; display:none;">ID atau Password Salah!</p>
-        </div>
+
+    <div class="bar-info-header">
+        <img src="logo.png" alt="Logo">
+        <h4>XII TEKNIK KOMPUTER & JARINGAN C</h4>
+        <img src="logosmk.png" alt="Logo SMK">
     </div>
 
-    <div id="chat-page">
-        <div class="header">
-            <div><small>User:</small> <b id="curUser"></b></div>
-            <div>
-                <button onclick="changeName()" style="background:#128c7e; color:white; border:none; padding:5px 10px;">Profil</button>
-                <button onclick="location.reload()" style="background:transparent; color:white; border:1px solid white; padding:5px 10px;">Logout</button>
+    <div class="main-wrapper">
+        <div class="content">
+            <div class="glass-card">
+                <b><i><h5 style="color: white; font-size: 1.5rem; margin: 0;">Welcome!</h5></i></b>
+                <i><h6 style="color: white; font-size: 1rem; margin: 5px 0 0 0;">To Class XII TKJ C SMK KRISTEN HARAPAN RANTEPAO</h6></i>
             </div>
         </div>
-        <div id="admin-panel">
-            <b>User Online:</b> <span id="onlineList">Memuat...</span>
-        </div>
-        <div id="chat"></div>
-        <div class="footer">
-            <input type="text" id="m" maxlength="100" placeholder="Ketik pesan..." onkeydown="if(event.key==='Enter')send()">
-            <button onclick="send()" style="background:#075e54; color:white; border:none; width:45px; height:45px; border-radius:50%;">OK</button>
-        </div>
     </div>
 
-<script>
-    let myID = "";
-    let myName = "";
-    const colors = ["#E91E63", "#9C27B0", "#673AB7", "#3F51B5", "#2196F3", "#009688", "#4CAF50", "#FF9800", "#FF5722", "#795548"];
-
-    const validUsers = {
-        "55555555": "admin128", 
-        "10293847": "gh9uj8k0", "55667788": "a2b3c4d5", "11223344": "x9z8y7w6",
-        "99887766": "k1l2m3n4", "12344321": "p5o6i7u8", "88889999": "q1w2e3r4",
-        "20260401": "t5y6u7i8", "77665544": "s1d2f3g4", "13572468": "h5j6k7l8",
-        "24681357": "z1x2c3v4", "11122233": "b5n6m7q8", "44455566": "w1e2r3t4",
-        "77788899": "y5u6i7o8", "10102020": "p1a2s3d4", "90908080": "f5g6h7j8",
-        "12123434": "k1l2m3z4", "56567878": "x1c2v3b4", "98765432": "n1m2q3w4",
-        "12312312": "e1r2t3y4", "80801602": "u1i2o3p4"
-    };
-
-    function attemptLogin() {
-        const id = document.getElementById("userId").value.trim();
-        const p = document.getElementById("pass").value.trim();
-
-        if (validUsers[id] && validUsers[id] === p) {
-            myID = id;
-            document.getElementById("login-page").style.display = "none";
-            document.getElementById("chat-page").style.display = "flex";
-            
-            if (myID === "55555555") {
-                document.getElementById("admin-panel").style.display = "block";
-                document.getElementById("chat").classList.add("chat-with-admin");
-            }
-
-            let savedName = localStorage.getItem("name_" + myID);
-            if (!savedName) promptName();
-            else { myName = savedName; finishLogin(); }
-        } else {
-            document.getElementById("err").style.display = "block";
-        }
-    }
-
-    function promptName() {
-        let n = prompt("Masukkan Nama Profil:", "");
-        myName = (n && n.trim() !== "") ? n.substring(0, 15) : "User-" + myID.substring(4);
-        localStorage.setItem("name_" + myID, myName);
-        finishLogin();
-    }
-
-    function changeName() {
-        let newName = prompt("Ubah Nama:", myName);
-        if (newName && newName.trim() !== "") {
-            myName = newName.substring(0, 15);
-            localStorage.setItem("name_" + myID, myName);
-            document.getElementById("curUser").innerText = myName;
-        }
-    }
-
-    function finishLogin() {
-        document.getElementById("curUser").innerText = myName;
-        load(); setInterval(load, 2500);
-    }
-
-    function send() {
-        const input = document.getElementById("m");
-        const val = input.value.trim();
-        if(!val) return;
-        fetch(`/send?id=${myID}&user=${encodeURIComponent(myName)}&msg=${encodeURIComponent(val)}`).then(() => {
-            input.value = ""; load();
-        });
-    }
-
-    function load() {
-        fetch(`/get?id=${myID}&user=${encodeURIComponent(myName)}`).then(r => r.json()).then(data => {
-            let chatHtml = "";
-            data.messages.forEach(m => {
-                let isMe = (m.s === myName);
-                let charCodeSum = 0;
-                for (let i = 0; i < m.s.length; i++) charCodeSum += m.s.charCodeAt(i);
-                let color = isMe ? "" : `style="background-color:${colors[charCodeSum % 10]}"`;
-                chatHtml += `<div class="bubble ${isMe?'sent':'received'}" ${color}><span style="font-size:10px; font-weight:bold; display:block; opacity:0.8;">${m.s}</span>${m.t}</div>`;
-            });
-            document.getElementById("chat").innerHTML = chatHtml;
-            
-            if (myID === "55555555" && data.online) {
-                document.getElementById("onlineList").innerText = data.online;
-            }
-            let b = document.getElementById("chat"); b.scrollTop = b.scrollHeight;
-        });
-    }
-</script>
 </body>
 </html>
