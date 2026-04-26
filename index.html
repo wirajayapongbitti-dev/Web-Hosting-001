@@ -1,27 +1,48 @@
 <!DOCTYPE html>
 <html lang="id">
-    <title>CLASS XI TKJ C</title>
-    <head>
-       <style>
-          body {
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLASS XII TKJ C</title>
+    <style>
+        body {
             margin: 0;
             padding: 0;
             font-family: sans-serif;
+            
+            background-image: url('bg-foto.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: scroll;
+            background-repeat: no-repeat;
+         
+            min-height: 200vh; 
         }
 
         .bar-info-header {
             background-color: #000000;
             color: white;
-
-            padding: 5px 0;
+            padding: 20px 0;
             font-weight: bold;
-            font-family: sans-serif;
-            
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 999;
-            
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .bar-info-header img {
+            max-width: 60px;
+            height: auto;
+            padding: 0 20px;
+        }
+
+        .bar-info-header h4 {
+            margin: 0;
+            flex-grow: 1;
+            text-align: center;
         }
 
         .content {
@@ -29,19 +50,26 @@
             padding: 20px;
             text-align: center;
         }
-       </style>
-    </head>
-    <body>
 
-        <div class="bar-info-header">
-            <img src="logo.png" style="max-width: 80px; margin-left: 2%; margin-top: 1%; position: absolute; transform: translate(1, 1);">
-            <img src="logosmk.png" style="max-width: 80px; margin-left: 92%; margin-top: 1%; position: absolute; transform: translate(1, 1);">
-            <h4 style="text-align: center; margin-bottom: 3; margin-top: 3;">XII TEKNIK KOMPUTER & JARINGAN C</h4>
-            <P><h6 style="text-align: center;margin-top: 1%; margin-bottom: 1%;">SMK KRISTEN HARAPAN RANTEPAO</h6></P>
-        </div>
+        h5, h6 {
+            color: #092144;
+            font-family: Arial;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
 
-        <div class="content">
-            <b><i><h5 style="color: #092144; font-size: large; font-family: Arial;">Selamat Datang!</h5></i></b>
-        </div>
-    </body>
+    <div class="bar-info-header">
+        <img src="logo.png" alt="Logo">
+        <h4>XII TEKNIK KOMPUTER & JARINGAN C</h4>
+        <img src="logosmk.png" alt="Logo SMK">
+    </div>
+
+    <div class="content">
+        <b><i><h5 style="font-size: 1.5rem; color: white;">Welcome!</h5></i></b>
+        <i><h6 style="color: white;">To Class XII TKJ C SMK KRISTEN HARAPAN RANTEPAO</h6></i>
+    </div>
+
+</body>
 </html>
