@@ -3,74 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CLASS XII TKJ C</title>
+    <title>TELKOM DATA PREVIEW</title>
     <style>
-        body {
+        html, body {
             margin: 0;
             padding: 0;
-            font-family: sans-serif;
-            
-            background-image: url('bg-foto.jpg');
-            background-size: 100% auto;
-            
-            background-position: top center;
-            background-attachment: scroll;
-            background-repeat: no-repeat;
-        }
-
-        .main-wrapper {
             width: 100%;
-            min-height: 175vw; 
+            height: 100%;
+            overflow: hidden;
+            background-color: #323639;
         }
-
-        .bar-info-header {
-            background-color: #000000;
-            color: white;
-            padding: 20px 0;
-            font-weight: bold;
-            position: fixed;
-            top: 0;
+        .pdf-fullscreen {
             width: 100%;
-            height: 2%;
-            z-index: 999;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            
-        }
-
-        .bar-info-header img {
-            max-width: 60px;
-            height: auto;
-            padding: 0 20px;
-        }
-
-        .bar-info-header h6 {
-            margin: 0;
-            flex-grow: 1;
-            text-align: center;
-            font-size: 14px;
-        }
-
-        .content {
-            margin: 0%; 
-            padding-top: 90px;
-            text-align: center;
+            height: 100%;
+            border: none;
+            display: block;
         }
     </style>
 </head>
 <body>
-
-    <div class="bar-info-header">
-        <img src="logosmk.png" style="width: 45px;">
-        <h6 style="font-size: 65%; text-align: center;">XII TEKNIK KOMPUTER & JARINGAN C</h6>
-        <img src="logo.png" style="width: 45px;">
-    </div>
-        <div class="content">
-                <b><i><h5 style="font-family:  Verdana; color: black; font-size: 1,2rem; margin: 0%;">Welcome!</h5></i></b>
-                <b><i><h6 style="font-weight: bold; font-family: Verdana; color: black; font-size: 1,2rem; margin: 5px 0 0 0;">To Class XII TKJ C SMK KRISTEN HARAPAN RANTEPAO</h6></i></b>
-        </div>
-        <div class="main-wrapper">
+    <iframe 
+        class="pdf-fullscreen" 
+        src="https://drive.google.com/file/d/1ZRTHrdYoo8T4Ga412JR-YR1RDbZuutav/preview" 
+        allow="autoplay">
+    </iframe>
 
 </body>
 </html>
